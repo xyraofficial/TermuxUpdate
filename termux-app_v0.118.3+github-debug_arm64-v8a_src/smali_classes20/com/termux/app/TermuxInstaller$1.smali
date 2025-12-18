@@ -17,13 +17,13 @@
 # instance fields
 .field final synthetic val$activity:Landroid/app/Activity;
 
-.field final synthetic val$progress:Landroid/app/ProgressDialog;
+.field final synthetic val$progress:Landroid/app/AlertDialog;
 
 .field final synthetic val$whenDone:Ljava/lang/Runnable;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Ljava/lang/Runnable;Landroid/app/ProgressDialog;)V
+.method constructor <init>(Landroid/app/Activity;Ljava/lang/Runnable;Landroid/app/AlertDialog;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -43,20 +43,20 @@
 
     iput-object p2, p0, Lcom/termux/app/TermuxInstaller$1;->val$whenDone:Ljava/lang/Runnable;
 
-    iput-object p3, p0, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/ProgressDialog;
+    iput-object p3, p0, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/AlertDialog;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic lambda$run$0(Landroid/app/ProgressDialog;)V
+.method static synthetic lambda$run$0(Landroid/app/AlertDialog;)V
     .locals 1
-    .param p0, "progress"    # Landroid/app/ProgressDialog;
+    .param p0, "progress"    # Landroid/app/AlertDialog;
 
     .line 252
     :try_start_0
-    invoke-virtual {p0}, Landroid/app/ProgressDialog;->dismiss()V
+    invoke-virtual {p0}, Landroid/app/AlertDialog;->dismiss()V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -123,11 +123,11 @@
     .line 250
     iget-object v0, v1, Lcom/termux/app/TermuxInstaller$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/ProgressDialog;
+    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/AlertDialog;
 
     new-instance v3, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;
 
-    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/ProgressDialog;)V
+    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/AlertDialog;)V
 
     invoke-virtual {v0, v3}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -163,11 +163,11 @@
     .line 250
     iget-object v0, v1, Lcom/termux/app/TermuxInstaller$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/ProgressDialog;
+    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/AlertDialog;
 
     new-instance v3, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;
 
-    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/ProgressDialog;)V
+    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/AlertDialog;)V
 
     invoke-virtual {v0, v3}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -203,11 +203,11 @@
     .line 250
     iget-object v0, v1, Lcom/termux/app/TermuxInstaller$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/ProgressDialog;
+    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/AlertDialog;
 
     new-instance v3, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;
 
-    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/ProgressDialog;)V
+    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/AlertDialog;)V
 
     invoke-virtual {v0, v3}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -243,11 +243,11 @@
     .line 250
     iget-object v0, v1, Lcom/termux/app/TermuxInstaller$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/ProgressDialog;
+    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/AlertDialog;
 
     new-instance v3, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;
 
-    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/ProgressDialog;)V
+    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/AlertDialog;)V
 
     invoke-virtual {v0, v3}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -452,11 +452,11 @@
     .line 250
     iget-object v0, v1, Lcom/termux/app/TermuxInstaller$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/ProgressDialog;
+    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/AlertDialog;
 
     new-instance v3, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;
 
-    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/ProgressDialog;)V
+    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/AlertDialog;)V
 
     invoke-virtual {v0, v3}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -641,11 +641,11 @@
     .line 250
     iget-object v0, v1, Lcom/termux/app/TermuxInstaller$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/ProgressDialog;
+    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/AlertDialog;
 
     new-instance v3, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;
 
-    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/ProgressDialog;)V
+    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/AlertDialog;)V
 
     invoke-virtual {v0, v3}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -1053,11 +1053,11 @@
     .end local v10    # "zipBytes":[B
     iget-object v0, v1, Lcom/termux/app/TermuxInstaller$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/ProgressDialog;
+    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/AlertDialog;
 
     new-instance v3, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;
 
-    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/ProgressDialog;)V
+    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/AlertDialog;)V
 
     goto :goto_b
 
@@ -1112,11 +1112,11 @@
     :cond_14
     iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v4, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/ProgressDialog;
+    iget-object v4, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/AlertDialog;
 
     new-instance v6, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;
 
-    invoke-direct {v6, v4}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/ProgressDialog;)V
+    invoke-direct {v6, v4}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/AlertDialog;)V
 
     invoke-virtual {v2, v6}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -1221,11 +1221,11 @@
     .end local v0    # "e":Ljava/lang/Exception;
     iget-object v0, v1, Lcom/termux/app/TermuxInstaller$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/ProgressDialog;
+    iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/AlertDialog;
 
     new-instance v3, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;
 
-    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/ProgressDialog;)V
+    invoke-direct {v3, v2}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/AlertDialog;)V
 
     :goto_b
     invoke-virtual {v0, v3}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
@@ -1240,11 +1240,11 @@
     :goto_c
     iget-object v2, v1, Lcom/termux/app/TermuxInstaller$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v3, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/ProgressDialog;
+    iget-object v3, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/AlertDialog;
 
     new-instance v4, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;
 
-    invoke-direct {v4, v3}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/ProgressDialog;)V
+    invoke-direct {v4, v3}, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;-><init>(Landroid/app/AlertDialog;)V
 
     invoke-virtual {v2, v4}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 

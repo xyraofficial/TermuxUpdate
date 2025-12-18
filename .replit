@@ -4,3 +4,26 @@ packages = ["unzip"]
 
 [agent]
 expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "APK Builder"
+
+[[workflows.workflow]]
+name = "APK Builder"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd termux-app_v0.118.3+github-debug_arm64-v8a_src && apktool b . -o ../termux-ios-style.apk && echo \"Build complete!\" || echo \"Build failed\""
+
+[workflows.workflow.metadata]
+outputType = "console"

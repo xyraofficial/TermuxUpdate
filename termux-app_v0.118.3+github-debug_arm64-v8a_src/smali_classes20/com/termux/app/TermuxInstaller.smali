@@ -487,21 +487,27 @@
 
     .line 112
     :goto_3
-    const v5, 0x7f10003f
+    new-instance v5, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0, v5}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-direct {v5, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    const v8, 0x7f0401a4
+
+    invoke-virtual {v5, v8}, Landroid/app/AlertDialog$Builder;->setView(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v5
 
-    invoke-static {p0, v4, v5, v0, v2}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZ)Landroid/app/ProgressDialog;
+    invoke-virtual {v5}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v0
 
+    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
+
     .line 113
-    .local v0, "progress":Landroid/app/ProgressDialog;
+    .local v0, "progress":Landroid/app/AlertDialog;
     new-instance v2, Lcom/termux/app/TermuxInstaller$1;
 
-    invoke-direct {v2, p0, p1, v0}, Lcom/termux/app/TermuxInstaller$1;-><init>(Landroid/app/Activity;Ljava/lang/Runnable;Landroid/app/ProgressDialog;)V
+    invoke-direct {v2, p0, p1, v0}, Lcom/termux/app/TermuxInstaller$1;-><init>(Landroid/app/Activity;Ljava/lang/Runnable;Landroid/app/AlertDialog;)V
 
     .line 259
     invoke-virtual {v2}, Lcom/termux/app/TermuxInstaller$1;->start()V
