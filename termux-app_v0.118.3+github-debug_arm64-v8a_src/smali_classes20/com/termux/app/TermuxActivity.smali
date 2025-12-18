@@ -2270,12 +2270,16 @@
     .end annotation
 
     .line 613
-    iget-object v0, p0, Lcom/termux/app/TermuxActivity;->mTerminalView:Lcom/termux/view/TerminalView;
+    invoke-virtual {p0}, Lcom/termux/app/TermuxActivity;->getMenuInflater()Landroid/view/MenuInflater;
 
-    invoke-virtual {v0}, Lcom/termux/view/TerminalView;->showContextMenu()Z
+    move-result-object v0
+
+    const v1, 0x7f0d0001
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
     .line 614
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     return v0
 .end method

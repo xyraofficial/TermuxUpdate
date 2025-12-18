@@ -3526,4 +3526,4 @@
     <public type="xml" name="termux_terminal_view_preferences" id="0x7f130010" />
     <public type="xml" name="termux_widget_debugging_preferences" id="0x7f130011" />
     <public type="xml" name="termux_widget_preferences" id="0x7f130012" />
-</resources>
+</resources>    <public type="menu" name="menu_main" id="0x7f0d0001" />

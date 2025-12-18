@@ -271,4 +271,6 @@ Report is too large to view here. Use `Save To File` option from options menu (3
     <string name="title_share_with">Share With</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
+    <string name="menu_info_apk">Info APK</string>
+    <string name="menu_developer">Developer</string>
 </resources>
