@@ -57,6 +57,8 @@
     <item type="id" name="activity_termux_root_view" />
     <item type="id" name="alertTitle" />
     <item type="id" name="androidx_window_activity_scope" />
+    <item type="id" name="bootstrap_progress" />
+    <item type="id" name="bootstrap_text" />
     <item type="id" name="buttonPanel" />
     <item type="id" name="cancel_button" />
     <item type="id" name="checkbox" />
