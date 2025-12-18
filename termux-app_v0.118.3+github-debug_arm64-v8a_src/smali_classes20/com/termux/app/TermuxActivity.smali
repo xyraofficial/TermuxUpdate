@@ -2258,7 +2258,7 @@
 .end method
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;)Z
-    .locals 1
+    .locals 3
     .param p1, "menu"    # Landroid/view/Menu;
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -2270,15 +2270,20 @@
     .end annotation
 
     .line 613
-    invoke-virtual {p0}, Lcom/termux/app/TermuxActivity;->getMenuInflater()Landroid/view/MenuInflater;
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
-    move-result-object v0
-
-    const v1, 0x7f0d0001
-
-    invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+    move-result v0
 
     .line 614
+    invoke-virtual {p0}, Lcom/termux/app/TermuxActivity;->getMenuInflater()Landroid/view/MenuInflater;
+
+    move-result-object v1
+
+    const v2, 0x7f0d0001
+
+    invoke-virtual {v1, v2, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+
+    .line 615
     const/4 v0, 0x1
 
     return v0
@@ -2287,6 +2292,68 @@
 .method public onDestroy()V
     .locals 2
 
+
+.method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    .locals 1
+    .param p1, "item"    # Landroid/view/MenuItem;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "item"
+        }
+    .end annotation
+
+    .line 620
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v0
+
+    const v1, 0x7f0e0001
+
+    if-eq v0, v1, :info_apk
+
+    const v1, 0x7f0e0002
+
+    if-eq v0, v1, :developer
+
+    invoke-super {p0, p1}, Landroid/app/Activity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    return v0
+
+    :info_apk
+    const-string v0, "Info APK clicked"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :developer
+    const-string v0, "Developer clicked"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
     .line 318
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
