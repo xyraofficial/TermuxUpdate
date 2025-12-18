@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field public final synthetic f$0:Landroid/app/ProgressDialog;
+.field public final synthetic f$0:Landroid/app/AlertDialog;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/app/ProgressDialog;)V
+.method public synthetic constructor <init>(Landroid/app/AlertDialog;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;->f$0:Landroid/app/ProgressDialog;
+    iput-object p1, p0, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;->f$0:Landroid/app/AlertDialog;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;->f$0:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk;->f$0:Landroid/app/AlertDialog;
 
-    invoke-static {v0}, Lcom/termux/app/TermuxInstaller$1;->lambda$run$0(Landroid/app/ProgressDialog;)V
+    invoke-static {v0}, Lcom/termux/app/TermuxInstaller$1;->lambda$run$0(Landroid/app/AlertDialog;)V
 
     return-void
 .end method

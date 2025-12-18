@@ -1,0 +1,74 @@
+## Report Info
+
+
+**User Action**: `crash report`  
+**Sender**: `TermuxActivity`  
+**Report Timestamp**: `2025-12-18 02:33:58.783 UTC`  
+##
+
+## Crash Details
+
+**Crash Thread**: `Thread[Thread-4,5,main]`  
+**Crash Timestamp**: `2025-12-18 02:33:55.995 UTC`  
+
+**Crash Message**:
+```
+No direct method <init>(Landroid/app/AlertDialog;)V in class Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk; or its super classes (declaration of 'com.termux.app.-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk' appears in /data/app/~~MDNg8flDCKHmpIC0v2-WMw==/com.termux--1mPM7XUxNE1SuQyCbbGVA==/base.apk!classes20.dex)
+```
+
+
+### Stacktrace
+
+```
+java.lang.NoSuchMethodError: No direct method <init>(Landroid/app/AlertDialog;)V in class Lcom/termux/app/-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk; or its super classes (declaration of 'com.termux.app.-$$Lambda$TermuxInstaller$1$xd41MVUJilhezFSlBVbZseoZtDk' appears in /data/app/~~MDNg8flDCKHmpIC0v2-WMw==/com.termux--1mPM7XUxNE1SuQyCbbGVA==/base.apk!classes20.dex)
+	at com.termux.app.TermuxInstaller$1.run(TermuxInstaller.java:250)
+
+```
+##
+
+
+## Termux App Info
+
+**APP_NAME**: `Termux`  
+**PACKAGE_NAME**: `com.termux`  
+**VERSION_NAME**: `0.118.3`  
+**VERSION_CODE**: `1002`  
+**TARGET_SDK**: `28`  
+**IS_DEBUGGABLE_BUILD**: `true`  
+**SE_PROCESS_CONTEXT**: `u:r:untrusted_app_27:s0:c81,c257,c512,c768`  
+**SE_FILE_CONTEXT**: `u:object_r:app_data_file:s0:c81,c257,c512,c768`  
+**SE_INFO**: `default:targetSdkVersion=28:complete`  
+**APK_RELEASE**: `Unknown`  
+**SIGNING_CERTIFICATE_SHA256_DIGEST**: `A40DA80A59D170CAA950CF15C18C454D47A39B26989D8B640ECD745BA71BF5DC`  
+##
+
+
+## Device Info
+
+### Software
+
+**OS_VERSION**: `4.19.157-perf+`  
+**SDK_INT**: `34`  
+**RELEASE**: `14`  
+**ID**: `UP1A.231005.007`  
+**DISPLAY**: `PD2225F_EX_A_14.2.13.0.W20.V000L1`  
+**INCREMENTAL**: `compiler06091010`  
+**SECURITY_PATCH**: `2025-05-01`  
+**IS_DEBUGGABLE**: `0`  
+**IS_TREBLE_ENABLED**: `true`  
+**TYPE**: `user`  
+**TAGS**: `release-keys`  
+
+### Hardware
+
+**MANUFACTURER**: `vivo`  
+**BRAND**: `vivo`  
+**MODEL**: `V2205`  
+**PRODUCT**: `V2205T`  
+**BOARD**: `bengal`  
+**HARDWARE**: `qcom`  
+**DEVICE**: `V2205`  
+**SUPPORTED_ABIS**: `arm64-v8a, armeabi-v7a, armeabi`  
+**SUPPORTED_32_BIT_ABIS**: `armeabi-v7a, armeabi`  
+**SUPPORTED_64_BIT_ABIS**: `arm64-v8a`  
+##
