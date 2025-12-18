@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    android:sharedUserId="com.termux"
+    android:sharedUserLabel="@string/shared_user_label"
+    android:installLocation="internalOnly"
+    android:compileSdkVersion="30"
+    android:compileSdkVersionCodename="11"
+    package="com.termux"
+    platformBuildVersionCode="30"
+    platformBuildVersionName="11"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <permission
+        android:label="@string/permission_run_command_label"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.termux.permission.RUN_COMMAND"
+        android:protectionLevel="dangerous"
+        android:description="@string/permission_run_command_description" />
+    <!-- Memungkinkan aplikasi melihat informasi tentang sambungan jaringan, misalnya jaringan yang ada dan tersambung. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Memungkinkan aplikasi membuat soket jaringan dan menggunakan protokol jaringan khusus. Browser dan aplikasi lain menyediakan sarana untuk mengirim data ke internet sehingga izin ini tidak diperlukan untuk mengirim data ke internet. -->
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <!-- Mengizinkan aplikasi menulis ke kartu SD. -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <!-- Mengizinkan apl mencegah ponsel tidur. -->
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+    <!-- Mengizinkan aplikasi untuk mengendalikan vibrator. -->
+    <uses-permission
+        android:name="android.permission.VIBRATE" />
+    <!-- Mengizinkan aplikasi menggunakan layanan di latar depan. -->
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Mengizinkan aplikasi meminta izin untuk mengabaikan pengoptimalan baterai bagi aplikasi tersebut. -->
+    <uses-permission
+        android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <!-- Mengizinkan aplikasi untuk berada di atas aplikasi lainnya atau bagian antarmuka pengguna. Aplikasi tersebut mungkin menganggu penggunaan Anda atas antarmuka pada aplikasi mana pun, atau ubah apa yang Anda lihat di aplikasi lainnya. -->
+    <uses-permission
+        android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS" />
+    <uses-permission
+        android:name="android.permission.DUMP" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <!-- Mengizinkan aplikasi meminta pemasangan paket. -->
+    <uses-permission
+        android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <!-- Mengizinkan apl menyetel alarm di apl jam alarm yang terpasang. Beberapa apl jam alarm mungkin tidak menerapkan fitur ini. -->
+    <uses-permission
+        android:name="com.android.alarm.permission.SET_ALARM" />
+    <application
+        android:theme="@style/Theme.Termux"
+        android:label="@string/application_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.termux.app.TermuxApplication"
+        android:debuggable="true"
+        android:allowBackup="false"
+        android:supportsRtl="false"
+        android:banner="@drawable/banner"
+        android:extractNativeLibs="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity
+            android:label="@string/application_name"
+            android:name="com.termux.app.TermuxActivity"
+            android:launchMode="singleTask"
+            android:configChanges="density|keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:resizeableActivity="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity-alias
+            android:name="com.termux.HomeActivity"
+            android:targetActivity="com.termux.app.TermuxActivity">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.IOT_LAUNCHER" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:theme="@android:style/Theme.Material.Light.DarkActionBar"
+            android:label="@string/application_name"
+            android:name="com.termux.app.activities.HelpActivity"
+            android:exported="false"
+            android:parentActivityName="com.termux.app.TermuxActivity"
+            android:resizeableActivity="true" />
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="@string/title_activity_termux_settings"
+            android:name="com.termux.app.activities.SettingsActivity"
+            android:exported="true" />
+        <activity
+            android:theme="@style/Theme.AppCompat.TermuxReportActivity"
+            android:name="com.termux.shared.activities.ReportActivity"
+            android:documentLaunchMode="intoExisting" />
+        <activity
+            android:label="@string/application_name"
+            android:name="com.termux.filepicker.TermuxFileReceiverActivity"
+            android:taskAffinity="com.termux.filereceiver"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:resizeableActivity="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.SEND" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:mimeType="application/*" />
+                <data
+                    android:mimeType="audio/*" />
+                <data
+                    android:mimeType="image/*" />
+                <data
+                    android:mimeType="message/*" />
+                <data
+                    android:mimeType="multipart/*" />
+                <data
+                    android:mimeType="text/*" />
+                <data
+                    android:mimeType="video/*" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:mimeType="application/*" />
+                <data
+                    android:mimeType="audio/*" />
+                <data
+                    android:mimeType="image/*" />
+                <data
+                    android:mimeType="text/*" />
+                <data
+                    android:mimeType="video/*" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="com.termux.filepicker.TermuxDocumentsProvider"
+            android:permission="android.permission.MANAGE_DOCUMENTS"
+            android:exported="true"
+            android:authorities="com.termux.documents"
+            android:grantUriPermissions="true">
+            <intent-filter>
+                <action
+                    android:name="android.content.action.DOCUMENTS_PROVIDER" />
+            </intent-filter>
+        </provider>
+        <provider
+            android:name="com.termux.app.TermuxOpenReceiver$ContentProvider"
+            android:permission="com.termux.permission.RUN_COMMAND"
+            android:exported="true"
+            android:authorities="com.termux.files"
+            android:grantUriPermissions="true" />
+        <receiver
+            android:name="com.termux.app.TermuxOpenReceiver"
+            android:exported="false" />
+        <receiver
+            android:name="com.termux.shared.activities.ReportActivity$ReportActivityBroadcastReceiver"
+            android:exported="false" />
+        <service
+            android:name="com.termux.app.TermuxService"
+            android:exported="false" />
+        <service
+            android:name="com.termux.app.RunCommandService"
+            android:permission="com.termux.permission.RUN_COMMAND"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.termux.RUN_COMMAND" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="10.0" />
+        <meta-data
+            android:name="com.samsung.android.keepalive.density"
+            android:value="true" />
+        <meta-data
+            android:name="com.samsung.android.multidisplay.keep_process_alive"
+            android:value="true" />
+        <meta-data
+            android:name="com.sec.android.support.multiwindow"
+            android:value="true" />
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+    </application>
+</manifest>
