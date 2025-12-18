@@ -2482,6 +2482,7 @@
     <public type="layout" name="text_view_without_line_height" id="0x7f0b008b" />
     <public type="layout" name="view_terminal_toolbar_extra_keys" id="0x7f0b008c" />
     <public type="layout" name="view_terminal_toolbar_text_input" id="0x7f0b008d" />
+    <public type="layout" name="dialog_bootstrap_installer_ios" id="0x7f0b008e" />
     <public type="layout" name="material_clock_period_toggle_land" id="0x7f0b003a" />
     <public type="menu" name="menu_report" id="0x7f0c0000" />
     <public type="menu" name="menu_text_io" id="0x7f0c0001" />

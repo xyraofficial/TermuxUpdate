@@ -1,0 +1,95 @@
+## Report Info
+
+
+**User Action**: `crash report`  
+**Sender**: `TermuxActivity`  
+**Report Timestamp**: `2025-12-18 02:19:40.607 UTC`  
+##
+
+## Crash Details
+
+**Crash Thread**: `Thread[main,5,main]`  
+**Crash Timestamp**: `2025-12-18 02:19:37.161 UTC`  
+
+**Crash Message**:
+```
+Resource ID #0x7f0401a4
+```
+
+
+### Stacktrace
+
+```
+android.content.res.Resources$NotFoundException: Resource ID #0x7f0401a4
+	at android.content.res.ResourcesImpl.getValue(ResourcesImpl.java:446)
+	at android.content.res.Resources.loadXmlResourceParser(Resources.java:2681)
+	at android.content.res.Resources.getLayout(Resources.java:1368)
+	at android.view.LayoutInflater.inflate(LayoutInflater.java:550)
+	at com.android.internal.app.AlertController.setupCustomContent(AlertController.java:783)
+	at com.android.internal.app.AlertController.setupView(AlertController.java:643)
+	at com.android.internal.app.AlertController.installContent(AlertController.java:374)
+	at android.app.AlertDialog.onCreate(AlertDialog.java:461)
+	at android.app.Dialog.dispatchOnCreate(Dialog.java:536)
+	at android.app.Dialog.show(Dialog.java:376)
+	at com.termux.app.TermuxInstaller.setupBootstrapIfNeeded(TermuxInstaller.java:112)
+	at com.termux.app.TermuxActivity.onServiceConnected(TermuxActivity.java:363)
+	at android.app.LoadedApk$ServiceDispatcher.doConnected(LoadedApk.java:2318)
+	at android.app.LoadedApk$ServiceDispatcher$RunConnection.run(LoadedApk.java:2354)
+	at android.os.Handler.handleCallback(Handler.java:1013)
+	at android.os.Handler.dispatchMessage(Handler.java:101)
+	at android.os.Looper.loopOnce(Looper.java:226)
+	at android.os.Looper.loop(Looper.java:328)
+	at android.app.ActivityThread.main(ActivityThread.java:9242)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:594)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1099)
+
+```
+##
+
+
+## Termux App Info
+
+**APP_NAME**: `Termux`  
+**PACKAGE_NAME**: `com.termux`  
+**VERSION_NAME**: `0.118.3`  
+**VERSION_CODE**: `1002`  
+**TARGET_SDK**: `28`  
+**IS_DEBUGGABLE_BUILD**: `true`  
+**SE_PROCESS_CONTEXT**: `u:r:untrusted_app_27:s0:c80,c257,c512,c768`  
+**SE_FILE_CONTEXT**: `u:object_r:app_data_file:s0:c80,c257,c512,c768`  
+**SE_INFO**: `default:targetSdkVersion=28:complete`  
+**APK_RELEASE**: `Unknown`  
+**SIGNING_CERTIFICATE_SHA256_DIGEST**: `A40DA80A59D170CAA950CF15C18C454D47A39B26989D8B640ECD745BA71BF5DC`  
+##
+
+
+## Device Info
+
+### Software
+
+**OS_VERSION**: `4.19.157-perf+`  
+**SDK_INT**: `34`  
+**RELEASE**: `14`  
+**ID**: `UP1A.231005.007`  
+**DISPLAY**: `PD2225F_EX_A_14.2.13.0.W20.V000L1`  
+**INCREMENTAL**: `compiler06091010`  
+**SECURITY_PATCH**: `2025-05-01`  
+**IS_DEBUGGABLE**: `0`  
+**IS_TREBLE_ENABLED**: `true`  
+**TYPE**: `user`  
+**TAGS**: `release-keys`  
+
+### Hardware
+
+**MANUFACTURER**: `vivo`  
+**BRAND**: `vivo`  
+**MODEL**: `V2205`  
+**PRODUCT**: `V2205T`  
+**BOARD**: `bengal`  
+**HARDWARE**: `qcom`  
+**DEVICE**: `V2205`  
+**SUPPORTED_ABIS**: `arm64-v8a, armeabi-v7a, armeabi`  
+**SUPPORTED_32_BIT_ABIS**: `armeabi-v7a, armeabi`  
+**SUPPORTED_64_BIT_ABIS**: `arm64-v8a`  
+##
