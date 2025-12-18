@@ -605,3 +605,29 @@
     .line 284
     return-void
 .end method
+
+# Helper method to update progress
+.method static updateProgressBar(Landroid/app/AlertDialog;I)V
+    .locals 2
+    
+    if-nez p0, :return_null
+    
+    :try_start
+    const v0, 0x7f0b008e
+    invoke-virtual {p0, v0}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
+    
+    move-result-object v0
+    
+    if-eqz v0, :return_null
+    
+    check-cast v0, Landroid/widget/ProgressBar;
+    
+    invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->setProgress(I)V
+    
+    :try_end
+    .catch Ljava/lang/Exception; {:try_start .. :try_end} :catch_err
+    
+    :return_null
+    :catch_err
+    return-void
+.end method

@@ -846,6 +846,10 @@
     if-eqz v5, :cond_f
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 205_prog
+    iget-object v20, v1, Lcom/termux/app/TermuxInstaller$1;->val$activity:Landroid/app/Activity;
+    iget-object v21, v1, Lcom/termux/app/TermuxInstaller$1;->val$progress:Landroid/app/AlertDialog;
+    new-instance v22, Ljava/lang/Runnable;
 
     move-result-object v5
 
