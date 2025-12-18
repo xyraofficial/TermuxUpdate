@@ -5,9 +5,11 @@
     <item
         android:id="@id/menu_item_info_apk"
         android:title="@string/menu_info_apk"
-        app:showAsAction="ifRoom" />
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="always" />
     <item
         android:id="@id/menu_item_developer"
         android:title="@string/menu_developer"
-        app:showAsAction="ifRoom" />
+        android:icon="@drawable/ic_share"
+        app:showAsAction="always" />
 </menu>

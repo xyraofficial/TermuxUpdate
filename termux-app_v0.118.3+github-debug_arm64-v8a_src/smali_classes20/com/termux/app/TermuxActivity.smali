@@ -2282,10 +2282,6 @@
     return v0
 .end method
 
-.method public onCreateOptionsMenu(Landroid/view/Menu;)Z
-    .locals 3
-    .param p1, "menu"    # Landroid/view/Menu;
-.end method
 
 .method public onDestroy()V
     .locals 2
