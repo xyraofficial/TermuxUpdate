@@ -135,6 +135,8 @@
     <item type="id" name="menu_item_cancel" />
     <item type="id" name="menu_item_copy_report" />
     <item type="id" name="menu_item_copy_text" />
+    <item type="id" name="menu_item_developer" />
+    <item type="id" name="menu_item_info_apk" />
     <item type="id" name="menu_item_save_report_to_file" />
     <item type="id" name="menu_item_share_report" />
     <item type="id" name="menu_item_share_text" />
