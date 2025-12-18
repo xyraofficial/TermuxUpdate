@@ -494,6 +494,9 @@
     const v8, 0x7f0b008e
 
     invoke-virtual {v5, v8}, Landroid/app/AlertDialog$Builder;->setView(I)Landroid/app/AlertDialog$Builder;
+    const/4 v8, 0x0
+    invoke-virtual {v5, v8}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+    move-result-object v5
 
     move-result-object v5
 
