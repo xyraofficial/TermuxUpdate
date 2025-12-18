@@ -3526,7 +3526,6 @@
     <public type="xml" name="termux_terminal_view_preferences" id="0x7f130010" />
     <public type="xml" name="termux_widget_debugging_preferences" id="0x7f130011" />
     <public type="xml" name="termux_widget_preferences" id="0x7f130012" />
-</resources>    <public type="menu" name="menu_main" id="0x7f0d0001" />
     <public type="id" name="menu_item_info_apk" id="0x7f0e0001" />
     <public type="id" name="menu_item_developer" id="0x7f0e0002" />
     <public type="menu" name="menu_main" id="0x7f0d0001" />
