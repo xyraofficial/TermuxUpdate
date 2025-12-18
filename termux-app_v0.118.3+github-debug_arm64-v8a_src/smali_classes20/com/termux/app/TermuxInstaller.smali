@@ -631,3 +631,33 @@
     :catch_err
     return-void
 .end method
+
+# Animation helper method
+.method static animateProgressSmooth(Landroid/app/AlertDialog;)V
+    .locals 6
+    .param p0, "dialog"    # Landroid/app/AlertDialog;
+    
+    const/4 v0, 0x5
+    
+    :anim_start
+    if-lt v0, 0x64, :anim_done
+    
+    :try_update
+    const v1, 0x7f0b008e
+    invoke-virtual {p0, v1}, Landroid/app/AlertDialog;->findViewById(I)Landroid/view/View;
+    
+    move-result-object v1
+    
+    if-eqz v1, :anim_continue
+    
+    check-cast v1, Landroid/widget/ProgressBar;
+    invoke-virtual {v1, v0}, Landroid/widget/ProgressBar;->setProgress(I)V
+    
+    :anim_continue
+    add-int/lit8 v0, v0, 0x3
+    
+    goto :anim_start
+    
+    :anim_done
+    return-void
+.end method
